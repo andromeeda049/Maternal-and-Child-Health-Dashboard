@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Dashboard } from './components/Dashboard';
+import { AIChat } from './components/AIChat';
 import { 
   parseRawCSV, 
   parseSheetData,
@@ -181,7 +182,10 @@ const App: React.FC = () => {
 
         {/* State: DASHBOARD */}
         {status === AppStatus.DASHBOARD && mappedData.length > 0 && (
-          <Dashboard data={mappedData} />
+          <>
+            <Dashboard data={mappedData} />
+            <AIChat data={mappedData} />
+          </>
         )}
       </main>
 
@@ -197,6 +201,7 @@ const App: React.FC = () => {
                     <span className="font-bold text-slate-700 text-lg">สำนักงานสาธารณสุขจังหวัดสตูล</span>
                 </div>
                 <p className="text-slate-400 text-sm">Satun Provincial Public Health Office</p>
+                <p className="text-xs text-slate-400 mt-2 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">พัฒนาโดย กลุ่มงานสุขภาพดิจิทัล</p>
             </div>
         </div>
       </footer>
