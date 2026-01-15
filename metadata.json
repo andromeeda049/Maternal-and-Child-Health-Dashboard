@@ -1,0 +1,5 @@
+{
+  "name": "Health KPI Insight",
+  "description": "Dashboard for analyzing Health Key Performance Indicators from Google Sheets.",
+  "requestFramePermissions": []
+}
